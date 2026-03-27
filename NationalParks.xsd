@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="githuburl"
+    xmlns:np="githuburl.xsd"
+    elementFormDefault="qualified" attributeFormDefault="unqualified">
+<element name="NationalParks">
+    <complexType>
+        <sequence>
+            <element name="NationalPark" minOccurs="1" maxOccurs="unbounded">
+                <complexType>
+                    <sequence>
+                        <element name="Name" type="string"/>
+                        <element name="Phone" type="string" minOccurs="1" maxOccurs="unbounded"/>
+                        <element name="address">
+                            <complexType>
+                                <sequence>
+                                    <element name="Number" type="integer"/>
+                                    <element name="Street" type="string"/>
+                                    <element name="City" type="string"/>
+                                    <element name="State" type="string"/>
+                                    <element name="Zip" type="integer"/>
+                                </sequence>
+                                <attribute name="NearestAirport" type="string" use="required"/>
+                            </complexType>
+                        </element>
+                    </sequence>
+                    <attribute name="Rating" type="decimal" use="optional"/>
+                </complexType>
+            </element>
+        </sequence>
+    </complexType>
+</element>
