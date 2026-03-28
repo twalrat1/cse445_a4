@@ -16,24 +16,24 @@
     <element name="NationalPark">
         <complexType>
             <sequence>
-                <element name="Name" type="xsd:string"/>
-                <element name="Phone" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
+                <element name="Name" type="xs:string"/>
+                <element name="Phone" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
                 <element name="Address" minOccurs="1" maxOccurs="1"/>
             </sequence>
-            <attribute name="Rating" type="xsd:decimal" use="optional"/>
+            <attribute name="Rating" type="xs:decimal" use="optional"/>
         </complexType>
     </element>
     <!-- Define Address a child of NationalPark -->
     <element name="Address">
         <complexType>
             <sequence>
-                <element name="Number" type="xsd:integer"/>
-                <element name="Street" type="xsd:string"/>
-                <element name="City" type="xsd:string"/>
-                <element name="State" type="xsd:string"/>
-                <element name="Zip" type="xsd:string"/>
+                <element name="Number" type="xs:integer"/>
+                <element name="Street" type="xs:string"/>
+                <element name="City" type="xs:string"/>
+                <element name="State" type="xs:string"/>
+                <element name="Zip" type="xs:string"/>
             </sequence>
-            <attribute name="NearestAirport" type="xsd:string" use="required"/>
+            <attribute name="NearestAirport" type="xs:string" use="required"/>
         </complexType>
     </element>
 </schema>
