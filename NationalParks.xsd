@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<schema xmlns="http://www.w3.org/2001/XMLSchema"
+<schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
     targetNamespace="https://twalrat1.github.io/cse445_a4/"
-    xmlns:np="https://twalrat1.github.io/cse445_a4/NationalParks.xsd"
+    xmlns="https://twalrat1.github.io/cse445_a4/NationalParks.xsd"
     elementFormDefault="qualified" attributeFormDefault="unqualified">
     <!-- Define root NationalParks Element -->
     <element name="NationalParks">
