@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
     targetNamespace="https://twalrat1.github.io/cse445_a4/"
     xmlns="https://twalrat1.github.io/cse445_a4/NationalParks.xsd"
     elementFormDefault="qualified" attributeFormDefault="unqualified">
     <!-- Define root NationalParks Element -->
-    <element name="NationalParks">
-        <complexType>
-            <sequence>
-                <element name="NationalPark" minOccurs="1" maxOccurs="unbounded"/>
-            </sequence>
-        </complexType>
-    </element>
+    <xs:element name="NationalParks">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="NationalPark" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
     <!-- Define NationalPark child of NationalParks -->
-    <element name="NationalPark">
-        <complexType>
-            <sequence>
-                <element name="Name" type="xs:string"/>
-                <element name="Phone" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
-                <element name="Address" minOccurs="1" maxOccurs="1"/>
-            </sequence>
-            <attribute name="Rating" type="xs:decimal" use="optional"/>
-        </complexType>
-    </element>
+    <xs:element name="NationalPark">
+        <xs:omplexType>
+            <xs:sequence>
+                <xs:element name="Name" type="xs:string"/>
+                <xs:element name="Phone" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element name="Address" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+            <xs:attribute name="Rating" type="xs:decimal" use="optional"/>
+        </xs:complexType>
+    </xs:element>
     <!-- Define Address a child of NationalPark -->
-    <element name="Address">
-        <complexType>
-            <sequence>
-                <element name="Number" type="xs:integer"/>
-                <element name="Street" type="xs:string"/>
-                <element name="City" type="xs:string"/>
-                <element name="State" type="xs:string"/>
-                <element name="Zip" type="xs:string"/>
-            </sequence>
-            <attribute name="NearestAirport" type="xs:string" use="required"/>
-        </complexType>
-    </element>
-</schema>
+    <xs:element name="Address">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Number" type="xs:integer"/>
+                <xs:element name="Street" type="xs:string"/>
+                <xs:element name="City" type="xs:string"/>
+                <xs:element name="State" type="xs:string"/>
+                <xs:element name="Zip" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="NearestAirport" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
