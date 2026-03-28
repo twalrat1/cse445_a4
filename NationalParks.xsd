@@ -4,35 +4,36 @@
     targetNamespace="https://twalrat1.github.io/cse445_a4/"
     xmlns:np="https://twalrat1.github.io/cse445_a4/NationalParks.xsd"
     elementFormDefault="qualified" attributeFormDefault="unqualified">
-<!-- Define root NationalParks Element -->
-<element name="NationalParks">
-    <complexType>
-        <sequence>
-            <element name="NationalPark" minOccurs="1" maxOccurs="unbounded"/>
-        </sequence>
-    </complexType>
-</element>
-<!-- Define NationalPark child of NationalParks -->
-<element name="NationalPark">
-    <complexType>
-        <sequence>
-            <element name="Name" type="xsd:string"/>
-            <element name="Phone" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
-            <element name="Address" minOccurs="1" maxOccurs="1"/>
-        </sequence>
-        <attribute name="Rating" type="xsd:decimal" use="optional"/>
-    </complexType>
-</element>
-<!-- Define Address a child of NationalPark -->
-<element name="Address"<complexType>
-    <complexType>
-        <sequence>
-            <element name="Number" type="xsd:integer"/>
-            <element name="Street" type="xsd:string"/>
-            <element name="City" type="xsd:string"/>
-            <element name="State" type="xsd:string"/>
-            <element name="Zip" type="xsd:string"/>
-        </sequence>
-        <attribute name="NearestAirport" type="xsd:string" use="required"/>
-    </complexType>
-</element>
+    <!-- Define root NationalParks Element -->
+    <element name="NationalParks">
+        <complexType>
+            <sequence>
+                <element name="NationalPark" minOccurs="1" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <!-- Define NationalPark child of NationalParks -->
+    <element name="NationalPark">
+        <complexType>
+            <sequence>
+                <element name="Name" type="xsd:string"/>
+                <element name="Phone" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
+                <element name="Address" minOccurs="1" maxOccurs="1"/>
+            </sequence>
+            <attribute name="Rating" type="xsd:decimal" use="optional"/>
+        </complexType>
+    </element>
+    <!-- Define Address a child of NationalPark -->
+    <element name="Address">
+        <complexType>
+            <sequence>
+                <element name="Number" type="xsd:integer"/>
+                <element name="Street" type="xsd:string"/>
+                <element name="City" type="xsd:string"/>
+                <element name="State" type="xsd:string"/>
+                <element name="Zip" type="xsd:string"/>
+            </sequence>
+            <attribute name="NearestAirport" type="xsd:string" use="required"/>
+        </complexType>
+    </element>
+</schema>
